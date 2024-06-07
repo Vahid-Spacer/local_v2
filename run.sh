@@ -8,6 +8,7 @@ fi
 apt update
 apt install iptables -y
 touch /etc/rc.localv2
+touch /root/rc.local.oldv2
 echo "1. Iran"
 echo "2. Kharej"
 echo "3. uninstall"
