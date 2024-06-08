@@ -27,7 +27,7 @@ ip link set 6to4tun_IR_v2 mtu 1480
 ip link set 6to4tun_IR_v2 up
 # confige tunnele GRE6 ya IPIPv6 IR
 ip -6 tunnel add GRE6Tun_IR_v2 mode ip6gre remote 2001:470:1f10:e2f::2 local 2001:470:1f10:e2f::1
-ip addr add 172.16.1.1/30 dev GRE6Tun_IR_v2
+ip addr add 172.16.2.1/30 dev GRE6Tun_IR_v2
 ip link set GRE6Tun_IR_v2 mtu 1436
 ip link set GRE6Tun_IR_v2 up
 iptables -F
@@ -63,7 +63,7 @@ ip -6 addr add 2001:470:1f10:e2f::2/64 dev 6to4tun_KH_v2
 ip link set 6to4tun_KH_v2 mtu 1480
 ip link set 6to4tun_KH_v2 up
 ip -6 tunnel add GRE6Tun_KH_v2 mode ip6gre remote 2001:470:1f10:e2f::1 local 2001:470:1f10:e2f::2
-ip addr add 172.16.1.2/30 dev GRE6Tun_KH_v2
+ip addr add 172.16.2.2/30 dev GRE6Tun_KH_v2
 ip link set GRE6Tun_KH_v2 mtu 1436
 ip link set GRE6Tun_KH_v2 up
 iptables -F
